@@ -45,38 +45,31 @@ function renderServiceCardHTML(service) {
 
   return `
     <div class="col-md-6 col-lg-4 d-flex">
-      <div class="sahay-card sahay-card-interactive w-100 d-flex flex-column justify-content-between">
+      <div class="sahaya-card sahay-card-interactive w-100 d-flex flex-column justify-content-between p-4" style="background-color: var(--bg-card); border: 1px solid var(--border-subtle);">
         <div>
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="badge-sahay-orange">${escapeHtml(service.category)}</span>
-            <span class="badge-sahay-gold d-flex align-items-center gap-1">
-              <i class="bi bi-check-circle-fill text-warning"></i> You may be eligible
-            </span>
+            <span class="badge badge-sahaya-gold" style="font-size: 0.75rem;">${escapeHtml(service.category)}</span>
           </div>
 
-          <h3 class="h5 font-weight-bold mb-2">
+          <h3 class="h5 font-weight-bold mb-2" style="font-weight: 800 !important;">
             <a href="service-details.html?id=${service.id}" class="text-decoration-none text-dark">${escapeHtml(service.name)}</a>
           </h3>
 
-          <p class="small text-muted font-weight-bold mb-3 d-flex align-items-center gap-1">
-            <i class="bi bi-geo-alt text-warning"></i> ${escapeHtml(service.location)}
+          <p class="small text-muted font-weight-bold mb-3 d-flex align-items-center gap-1" style="font-size: 0.8rem;">
+            <i class="bi bi-geo-alt text-orange"></i> ${escapeHtml(service.location)}
           </p>
 
-          <p class="small text-dark opacity-75 mb-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5;">
+          <p class="small text-dark mb-3" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; color: #3A2D1D !important; font-size: 0.88rem;">
             ${escapeHtml(service.description)}
           </p>
-
-          <div class="p-2 rounded bg-light border mb-3 small text-muted font-weight-semibold">
-            <strong class="text-dark">Why it may help:</strong> ${escapeHtml(service.whyItHelps)}
-          </div>
         </div>
 
         <div>
-          <div class="d-flex gap-2 pt-2 border-top">
-            <a href="service-details.html?id=${service.id}" class="btn btn-sahay-primary btn-sm flex-fill font-weight-bold text-center">
-              View Details <i class="bi bi-arrow-right"></i>
+          <div class="d-flex gap-2 pt-3 border-top" style="border-color: var(--border-subtle) !important;">
+            <a href="service-details.html?id=${service.id}" class="btn btn-sahaya-primary btn-sm flex-fill font-weight-bold text-center">
+              View Details <i class="bi bi-arrow-right ms-1"></i>
             </a>
-            <button onclick="event.preventDefault(); toggleSaveService(${service.id}); location.reload();" class="btn btn-sahay-outline btn-sm font-weight-bold" title="${isSaved ? 'Saved' : 'Save Service'}">
+            <button onclick="event.preventDefault(); toggleSaveService(${service.id}); location.reload();" class="btn btn-sahaya-outline btn-sm font-weight-bold" title="${isSaved ? 'Saved' : 'Save Service'}">
               <i class="bi bi-bookmark${isSaved ? '-fill text-warning' : ''}"></i> ${isSaved ? 'Saved' : 'Save'}
             </button>
           </div>

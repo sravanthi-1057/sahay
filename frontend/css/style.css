@@ -225,6 +225,15 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
   padding: 0.35rem 0.85rem !important;
 }
 
+.badge-sahaya-soft-gold, .badge-sahay-soft-gold {
+  background-color: #FFF2D6 !important;   /* Soft Light Gold #FFF2D6 */
+  color: #201808 !important;               /* Deep Espresso #201808 */
+  border: 1px solid #F0DEB4 !important;
+  font-weight: 800 !important;
+  border-radius: 9999px !important;
+  padding: 0.35rem 0.85rem !important;
+}
+
 .badge-sahaya-taupe, .badge-sahay-taupe {
   background-color: var(--border-subtle) !important;
   color: var(--text-main) !important;
@@ -264,8 +273,16 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
   font-weight: 700 !important;
 }
 
-.sahaya-footer p, .sahaya-footer span, .sahay-footer p, .sahay-footer span {
+.sahaya-footer p, .sahaya-footer span:not(.badge), .sahay-footer p, .sahay-footer span:not(.badge) {
   color: #F8F0E0 !important;                         /* Main footer text: Warm Cream #F8F0E0 */
+}
+
+.sahaya-footer .badge-sahaya-gold, .sahay-footer .badge-sahaya-gold,
+.sahaya-footer .badge-sahay-gold, .sahay-footer .badge-sahay-gold {
+  background-color: #FFD98A !important;
+  color: #201808 !important;                         /* Black font color #201808 */
+  border: 1px solid #E5C370 !important;
+  font-weight: 800 !important;
 }
 
 .sahaya-footer .text-muted, .sahaya-footer .small-desc,
