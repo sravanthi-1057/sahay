@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
 .sahaya-navbar .nav-link:hover, .sahay-navbar .nav-link:hover,
 .sahaya-navbar .nav-link.active, .sahay-navbar .nav-link.active {
   color: var(--brand-primary) !important;
-  background-color: var(--bg-card);
+  background-color: transparent !important;
 }
 
 /* Brand Logo */
