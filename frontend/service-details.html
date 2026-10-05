@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details — SAHAY</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom SAHAY Palette CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sahaya-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <div class="sahaya-logo-icon">S</div>
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold fs-4 text-dark lh-1">SAHAY</span>
+          <span class="small fw-bold text-orange text-uppercase" style="font-size: 0.65rem;">Civic Service Finder</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sahayNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="sahayNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find-help.html">Find Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saved-services.html">Saved Services</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbarAuthButtons">
+          <a href="login.html" class="btn btn-sahaya-outline btn-sm font-weight-bold px-3">Login</a>
+          <a href="signup.html" class="btn btn-sahaya-primary btn-sm font-weight-bold px-3">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SERVICE DETAILS CONTAINER -->
+  <main class="py-5">
+    <div class="container">
+
+      <!-- Breadcrumb & Back Action -->
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none text-muted">Services</a></li>
+            <li class="breadcrumb-item active text-dark font-weight-semibold" id="breadcrumbServiceName">Service Details</li>
+          </ol>
+        </nav>
+
+        <a href="javascript:history.back()" class="btn btn-sahaya-outline btn-sm font-weight-bold">
+          <i class="bi bi-arrow-left me-1"></i> Back
+        </a>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Main Content Column -->
+        <div class="col-lg-8">
+          
+          <!-- What is this service? -->
+          <div class="sahaya-card mb-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+              <span class="badge-sahaya-orange" id="serviceCategory">Category</span>
+              <span class="badge-sahaya-gold d-flex align-items-center gap-1">
+                <i class="bi bi-check-circle-fill text-warning"></i> You may be eligible
+              </span>
+            </div>
+
+            <h1 class="h2 font-weight-bold mb-3 text-dark" id="serviceTitle">Loading Service Title...</h1>
+
+            <p class="text-muted font-weight-semibold d-flex align-items-center gap-2 mb-4">
+              <i class="bi bi-geo-alt-fill text-warning"></i>
+              <span id="serviceLocation">All India</span>
+            </p>
+
+            <h2 class="h5 font-weight-bold text-dark mb-2">What is this service?</h2>
+            <p class="text-dark mb-4" id="serviceDescription" style="line-height: 1.6;">
+              Service description loading...
+            </p>
+
+            <!-- Why this may help you -->
+            <div class="p-4 rounded-3 border-start border-4 border-warning bg-light-cream">
+              <div class="d-flex align-items-start gap-3">
+                <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center flex-shrink-0" style="width: 2.5rem; height: 2.5rem;">
+                  <i class="bi bi-lightbulb-fill fs-5"></i>
+                </div>
+                <div>
+                  <h2 class="h6 font-weight-bold text-dark mb-1">Why this may help you</h2>
+                  <p class="mb-0 text-dark small" id="serviceWhyItHelps" style="line-height: 1.5;">
+                    Explanation loading...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Eligibility -->
+          <div class="sahaya-card mb-4">
+            <h2 class="h4 font-weight-bold text-dark mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-shield-check text-orange fs-4"></i> Eligibility Requirements
+            </h2>
+            <p class="small text-muted mb-4">
+              Review these criteria before starting your application. Department officials make final eligibility determinations.
+            </p>
+
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-3" id="eligibilityList">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <!-- Documents Required -->
+          <div class="sahaya-card mb-4">
+            <h2 class="h4 font-weight-bold text-dark mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-folder-check text-orange fs-4"></i> Documents Required
+            </h2>
+            <p class="small text-muted mb-4">
+              Gather clear scanned PDF or physical copies of these documents:
+            </p>
+
+            <div class="row g-3" id="documentsList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- How to Apply -->
+          <div class="sahaya-card mb-4">
+            <h2 class="h4 font-weight-bold text-dark mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-signpost-split text-orange fs-4"></i> How to Apply
+            </h2>
+            <p class="small text-muted mb-4">
+              Follow these standard four steps to complete your submission:
+            </p>
+
+            <div class="d-flex flex-column gap-4 position-relative ps-2" id="stepsTimeline">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Important Information & Disclaimer -->
+          <div class="alert alert-warning rounded-3 p-4 border border-warning d-flex gap-3 align-items-start mb-0">
+            <i class="bi bi-exclamation-triangle-fill fs-4 text-warning flex-shrink-0"></i>
+            <div>
+              <h3 class="h6 font-weight-bold mb-1 text-dark">Important Information &amp; Disclaimer</h3>
+              <p class="small mb-0 text-dark opacity-90" style="line-height: 1.5;">
+                SAHAY is an independent citizen-first discovery platform. We do not charge application fees or grant official approvals directly. Always verify deadline dates and official announcements on the verified department website.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Actions Column -->
+        <div class="col-lg-4">
+          <div class="sahaya-card sticky-top" style="top: 90px;">
+            <h3 class="h5 font-weight-bold text-dark mb-2">Where to Apply</h3>
+            
+            <p class="small text-muted mb-4">
+              Access the official verified government or department portal below:
+            </p>
+
+            <div class="d-grid gap-2 mb-4">
+              <a href="#" id="officialWebsiteBtn" target="_blank" rel="noopener noreferrer" class="btn btn-sahaya-primary py-3 font-weight-bold text-center fs-6">
+                Go to Official Website <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+
+              <button id="bookmarkBtn" onclick="handleToggleBookmark()" class="btn btn-sahaya-outline py-2 font-weight-bold">
+                <i class="bi bi-bookmark me-1" id="bookmarkIcon"></i> <span id="bookmarkText">Save Service</span>
+              </button>
+            </div>
+
+            <hr class="my-4">
+
+            <h4 class="h6 font-weight-bold text-dark mb-3">Service Snapshot</h4>
+
+            <ul class="list-unstyled small d-flex flex-column gap-3 mb-0">
+              <li class="d-flex align-items-center justify-content-between">
+                <span class="text-muted"><i class="bi bi-tags me-2 text-warning"></i> Category:</span>
+                <strong class="text-dark" id="sidebarCategory">Education</strong>
+              </li>
+              <li class="d-flex align-items-center justify-content-between">
+                <span class="text-muted"><i class="bi bi-geo me-2 text-warning"></i> Jurisdiction:</span>
+                <strong class="text-dark" id="sidebarLocation">All India</strong>
+              </li>
+              <li class="d-flex align-items-center justify-content-between">
+                <span class="text-muted"><i class="bi bi-shield-check me-2 text-warning"></i> Status:</span>
+                <span class="badge bg-success bg-opacity-10 text-success font-weight-bold px-2 py-1">Active Scheme</span>
+              </li>
+              <li class="d-flex align-items-center justify-content-between">
+                <span class="text-muted"><i class="bi bi-currency-rupee me-2 text-warning"></i> Portal Fee:</span>
+                <strong class="text-dark">Free / Nominal</strong>
+              </li>
+            </ul>
+
+            <hr class="my-4">
+
+            <h4 class="h6 font-weight-bold text-dark mb-2">Need Help with Another Problem?</h4>
+            <p class="small text-muted mb-3">
+              Describe a different situation to find matched services.
+            </p>
+            <a href="find-help.html" class="btn btn-sahaya-gold btn-sm w-100 font-weight-bold text-center">
+              <i class="bi bi-search me-1"></i> Find Help for Another Problem
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+    <!-- FOOTER (BRAND, SUPPORT, PRIVACY POLICY & BOTTOM BAR) -->
+  <footer class="sahaya-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+                <!-- Section 1: Brand Section -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="sahaya-logo-icon">S</div>
+            <span class="font-weight-bold fs-4 text-light">SAHAY</span>
+          </div>
+          <p class="small text-orange font-weight-bold mb-3 text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</p>
+          <div class="d-flex align-items-center gap-2 mt-2">
+            <span class="badge badge-sahaya-gold">Public Benefit Platform</span>
+            <span class="badge badge-sahaya-orange">Prototype v1.0</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Platform Navigation Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Home</a></li>
+            <li><a href="find-help.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Find Help</a></li>
+            <li><a href="services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Services</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> About</a></li>
+            <li><a href="saved-services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Saved Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Citizen Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Citizen Support</h6>
+          <p class="small text-muted mb-2">Need direct assistance or emergency guidance?</p>
+          <div class="small text-muted">
+            <strong class="text-light d-block mb-1"><i class="bi bi-telephone-fill text-warning me-1"></i> National Helplines:</strong>
+            • National Citizen Portal: <strong>1915</strong><br/>
+            • Ayushman Bharat (PM-JAY): <strong>14555</strong><br/>
+            • National Scholarship Portal: <strong>0120-6619540</strong>
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy Policy & Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Privacy &amp; Policy</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+            <li><a href="#" onclick="alert('Privacy Policy: SAHAY respects user privacy. Problem descriptions and session data are stored locally in your browser and never sold.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-shield-lock text-warning me-1"></i> Privacy Policy</a></li>
+            <li><a href="#" onclick="alert('Terms of Service: SAHAY is an open citizen guidance portal. Official applications and fee payments occur directly on government domains.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-file-earmark-text text-warning me-1"></i> Terms of Service</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-people text-warning me-1"></i> Team &amp; Mission</a></li>
+          </ul>
+          <p class="small text-muted mb-0" style="font-size: 0.75rem; line-height: 1.4;">
+            SAHAY is a problem discovery engine. Official applications take place on verified department websites.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Bottom Bar -->
+      <div class="border-top border-secondary pt-3 d-flex flex-wrap justify-content-between align-items-center small text-muted gap-2">
+        <span>&copy; 2026 SAHAY Platform. All rights reserved. Open Civic Technology.</span>
+        <span>Start with the problem, not the service name. Built with <i class="bi bi-heart-fill text-orange"></i> for citizens.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    let currentServiceId = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceId = urlParams.get('id') || 1;
+      
+      const service = getServiceById(serviceId);
+      currentServiceId = service.id;
+
+      if (!service) {
+        window.location.href = 'services.html';
+        return;
+      }
+
+      // Populate DOM elements
+      document.title = `${service.name} — SAHAY Details`;
+      document.getElementById('breadcrumbServiceName').textContent = service.name;
+      document.getElementById('serviceCategory').textContent = service.category;
+      document.getElementById('serviceTitle').textContent = service.name;
+      document.getElementById('serviceLocation').textContent = service.location;
+      document.getElementById('serviceDescription').textContent = service.description;
+      document.getElementById('serviceWhyItHelps').textContent = service.whyItHelps;
+      
+      document.getElementById('sidebarCategory').textContent = service.category;
+      document.getElementById('sidebarLocation').textContent = service.location;
+      document.getElementById('officialWebsiteBtn').href = service.officialUrl;
+
+      // Populate Eligibility List
+      const eligibilityList = document.getElementById('eligibilityList');
+      eligibilityList.innerHTML = (service.eligibility || []).map(item => `
+        <li class="d-flex align-items-start gap-3 p-3 rounded bg-light border">
+          <i class="bi bi-check-circle-fill text-success fs-5 mt-1 flex-shrink-0"></i>
+          <span class="text-dark font-weight-semibold" style="line-height: 1.5;">${escapeHtml(item)}</span>
+        </li>
+      `).join('');
+
+      // Populate Documents List
+      const documentsList = document.getElementById('documentsList');
+      documentsList.innerHTML = (service.documents || []).map(doc => `
+        <div class="col-md-6">
+          <div class="p-3 rounded bg-light border h-100 d-flex align-items-start gap-3">
+            <i class="bi bi-file-earmark-check-fill text-orange fs-4 flex-shrink-0"></i>
+            <div>
+              <span class="small text-dark font-weight-semibold d-block" style="line-height: 1.4;">${escapeHtml(doc)}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Populate How to Apply Steps Timeline (01 Check Eligibility, 02 Prepare Documents, 03 Submit Application, 04 Track Application)
+      const stepsTimeline = document.getElementById('stepsTimeline');
+      const stepLabels = [
+        "01 — Check Eligibility",
+        "02 — Prepare Documents",
+        "03 — Submit Application",
+        "04 — Track Application"
+      ];
+
+      stepsTimeline.innerHTML = (service.steps || []).map((step, idx) => `
+        <div class="d-flex align-items-start gap-3">
+          <div class="rounded-circle bg-espresso text-warning font-weight-bold d-flex align-items-center justify-content-center flex-shrink-0" style="width: 2.5rem; height: 2.5rem; border: 2px solid var(--accent-gold);">
+            ${idx + 1}
+          </div>
+          <div class="p-3 rounded bg-light border flex-fill">
+            <h3 class="h6 font-weight-bold text-dark mb-1">${stepLabels[idx] || `0${idx + 1} — Next Step`}</h3>
+            <p class="small text-dark mb-0 opacity-90" style="line-height: 1.5;">${escapeHtml(step)}</p>
+          </div>
+        </div>
+      `).join('');
+
+      updateBookmarkBtnState();
+    });
+
+    function updateBookmarkBtnState() {
+      const saved = getSavedServices();
+      const isSaved = saved.includes(currentServiceId);
+      const icon = document.getElementById('bookmarkIcon');
+      const text = document.getElementById('bookmarkText');
+      
+      if (isSaved) {
+        icon.className = 'bi bi-bookmark-fill text-warning';
+        text.textContent = 'Saved Service';
+      } else {
+        icon.className = 'bi bi-bookmark';
+        text.textContent = 'Save Service';
+      }
+    }
+
+    function handleToggleBookmark() {
+      if (currentServiceId) {
+        toggleSaveService(currentServiceId);
+        updateBookmarkBtnState();
+      }
+    }
+  </script>
+</body>
+</html>

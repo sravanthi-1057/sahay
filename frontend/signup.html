@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — SAHAY</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom SAHAY Palette CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sahaya-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <div class="sahaya-logo-icon">S</div>
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold fs-4 text-dark lh-1">SAHAY</span>
+          <span class="small fw-bold text-orange text-uppercase" style="font-size: 0.65rem;">Civic Service Finder</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sahayNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="sahayNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find-help.html">Find Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saved-services.html">Saved Services</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbarAuthButtons">
+          <a href="login.html" class="btn btn-sahaya-outline btn-sm font-weight-bold px-3">Login</a>
+          <a href="signup.html" class="btn btn-sahaya-primary btn-sm font-weight-bold px-3 active">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIGNUP CONTAINER -->
+  <main class="py-5 d-flex align-items-center justify-content-center flex-fill">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          
+          <div class="sahaya-card p-4 p-sm-5 shadow-sm">
+            <div class="text-center mb-4">
+              <div class="mx-auto mb-3 rounded-circle bg-espresso text-warning font-weight-bold d-flex align-items-center justify-content-center shadow-sm" style="width: 3.5rem; height: 3.5rem; border: 2px solid var(--accent-gold);">
+                <i class="bi bi-person-plus-fill fs-3 text-orange"></i>
+              </div>
+              <h1 class="h3 font-weight-bold text-dark mb-1">Create your SAHAY account</h1>
+              <p class="small text-muted mb-0">Join to save services, track applications, and get tailored guidance.</p>
+            </div>
+
+            <div id="signupAlertContainer"></div>
+
+            <form onsubmit="handleSignupFormSubmit(event);">
+              <div class="mb-3">
+                <label for="signupName" class="form-label small font-weight-bold text-dark">Full Name</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-beige text-muted"><i class="bi bi-person"></i></span>
+                  <input type="text" id="signupName" class="form-control sahaya-input" placeholder="Your Name" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label small font-weight-bold text-dark">Email Address</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-beige text-muted"><i class="bi bi-envelope"></i></span>
+                  <input type="email" id="signupEmail" class="form-control sahaya-input" placeholder="name@example.com" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label small font-weight-bold text-dark">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-beige text-muted"><i class="bi bi-lock"></i></span>
+                  <input type="password" id="signupPassword" class="form-control sahaya-input" placeholder="At least 6 characters" minlength="6" required>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="signupConfirmPassword" class="form-label small font-weight-bold text-dark">Confirm Password</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-beige text-muted"><i class="bi bi-shield-lock"></i></span>
+                  <input type="password" id="signupConfirmPassword" class="form-control sahaya-input" placeholder="Repeat password" minlength="6" required>
+                </div>
+              </div>
+
+              <button type="submit" id="signupSubmitBtn" class="btn btn-sahaya-primary w-100 py-2 font-weight-bold">
+                Create Account <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </form>
+
+            <div class="text-center mt-4 pt-3 border-top">
+              <p class="small text-muted mb-0">
+                Already have an account? <a href="login.html" class="text-orange font-weight-bold text-decoration-none">Login</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+    <!-- FOOTER (BRAND, SUPPORT, PRIVACY POLICY & BOTTOM BAR) -->
+  <footer class="sahaya-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+                <!-- Section 1: Brand Section -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="sahaya-logo-icon">S</div>
+            <span class="font-weight-bold fs-4 text-light">SAHAY</span>
+          </div>
+          <p class="small text-orange font-weight-bold mb-3 text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</p>
+          <div class="d-flex align-items-center gap-2 mt-2">
+            <span class="badge badge-sahaya-gold">Public Benefit Platform</span>
+            <span class="badge badge-sahaya-orange">Prototype v1.0</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Platform Navigation Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Home</a></li>
+            <li><a href="find-help.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Find Help</a></li>
+            <li><a href="services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Services</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> About</a></li>
+            <li><a href="saved-services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Saved Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Citizen Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Citizen Support</h6>
+          <p class="small text-muted mb-2">Need direct assistance or emergency guidance?</p>
+          <div class="small text-muted">
+            <strong class="text-light d-block mb-1"><i class="bi bi-telephone-fill text-warning me-1"></i> National Helplines:</strong>
+            • National Citizen Portal: <strong>1915</strong><br/>
+            • Ayushman Bharat (PM-JAY): <strong>14555</strong><br/>
+            • National Scholarship Portal: <strong>0120-6619540</strong>
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy Policy & Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Privacy &amp; Policy</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+            <li><a href="#" onclick="alert('Privacy Policy: SAHAY respects user privacy. Problem descriptions and session data are stored locally in your browser and never sold.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-shield-lock text-warning me-1"></i> Privacy Policy</a></li>
+            <li><a href="#" onclick="alert('Terms of Service: SAHAY is an open citizen guidance portal. Official applications and fee payments occur directly on government domains.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-file-earmark-text text-warning me-1"></i> Terms of Service</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-people text-warning me-1"></i> Team &amp; Mission</a></li>
+          </ul>
+          <p class="small text-muted mb-0" style="font-size: 0.75rem; line-height: 1.4;">
+            SAHAY is a problem discovery engine. Official applications take place on verified department websites.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Bottom Bar -->
+      <div class="border-top border-secondary pt-3 d-flex flex-wrap justify-content-between align-items-center small text-muted gap-2">
+        <span>&copy; 2026 SAHAY Platform. All rights reserved. Open Civic Technology.</span>
+        <span>Start with the problem, not the service name. Built with <i class="bi bi-heart-fill text-orange"></i> for citizens.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    function handleSignupFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('signupName').value.trim();
+      const email = document.getElementById('signupEmail').value.trim();
+      const password = document.getElementById('signupPassword').value.trim();
+      const confirmPassword = document.getElementById('signupConfirmPassword').value.trim();
+      const btn = document.getElementById('signupSubmitBtn');
+      const alertContainer = document.getElementById('signupAlertContainer');
+
+      if (password !== confirmPassword) {
+        alertContainer.innerHTML = `
+          <div class="alert alert-danger small p-2 rounded-3 mb-3 d-flex align-items-center gap-2">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-5"></i>
+            <span>Passwords do not match. Please re-enter your password.</span>
+          </div>
+        `;
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Creating account...`;
+
+      setTimeout(() => {
+        const result = registerUser(name, email, password);
+        if (result.success) {
+          alertContainer.innerHTML = `
+            <div class="alert alert-success small p-2 rounded-3 mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span>Account created successfully! Redirecting...</span>
+            </div>
+          `;
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 800);
+        } else {
+          alertContainer.innerHTML = `
+            <div class="alert alert-danger small p-2 rounded-3 mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-exclamation-triangle-fill text-danger fs-5"></i>
+              <span>${escapeHtml(result.message)}</span>
+            </div>
+          `;
+          btn.disabled = false;
+          btn.innerHTML = `Create Account <i class="bi bi-arrow-right ms-1"></i>`;
+        }
+      }, 500);
+    }
+  </script>
+</body>
+</html>

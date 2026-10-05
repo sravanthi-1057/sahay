@@ -1,0 +1,334 @@
+/* SAHAY Custom CSS — Satoshi Typography & Exact Palette Specification */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,600,500,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Core Palette Tokens — Exact User Specification Table */
+  --bg-page: #F8F0E0;              /* Warm Cream - Main page background */
+  --text-main: #201808;            /* Deep Espresso - Headings, dark cards, primary text */
+  --brand-primary: #E86020;        /* Vibrant Orange - CTA, highlights, links */
+  --bg-card: #FFF9ED;              /* Cream White - Cards, light surfaces */
+  --bg-surface-light: #FFF9ED;     /* Cream White - Cards, light surfaces */
+  --bg-alt: #EDE4D3;               /* Soft Beige - Alternate sections */
+  --border-subtle: #EDE4D3;        /* Soft Beige - Light borders & subtle UI elements */
+  --text-muted: #A99A82;           /* Muted Taupe - Secondary text */
+  --border-dark: #3A2D1D;          /* Dark Brown Border - Dividers, borders */
+  --brand-hover: #FF7A32;          /* Light Orange - Orange hover state */
+  --accent-gold: #FFD98A;          /* Pale Gold - Small decorative accent */
+}
+
+body {
+  font-family: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background-color: var(--bg-page) !important;
+  color: var(--text-main) !important;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Headings (Satoshi 700-900 Bold/Tight) */
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
+  font-family: 'Satoshi', sans-serif !important;
+  color: var(--text-main);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Highlighted Words & Accents */
+.text-orange, .text-warning-highlight {
+  color: var(--brand-primary) !important;
+  font-weight: 800 !important;
+}
+
+/* Subtitle (Satoshi 400-500 Regular) */
+.lead, .subtitle, p.text-muted {
+  font-family: 'Satoshi', sans-serif !important;
+  font-weight: 500;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--border-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-main);
+}
+
+/* Navbar Custom Styling (Satoshi 500-600 Medium) */
+.sahaya-navbar, .sahay-navbar {
+  background-color: rgba(248, 240, 224, 0.96) !important; /* Warm Cream #F8F0E0 */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sahaya-navbar .nav-link, .sahay-navbar .nav-link {
+  font-family: 'Satoshi', sans-serif !important;
+  color: var(--text-main) !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.sahaya-navbar .nav-link:hover, .sahay-navbar .nav-link:hover,
+.sahaya-navbar .nav-link.active, .sahay-navbar .nav-link.active {
+  color: var(--brand-primary) !important;
+  background-color: var(--bg-card);
+}
+
+/* Brand Logo */
+.sahaya-logo-icon, .sahay-logo-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--brand-primary);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+/* Cards */
+.sahaya-card, .sahay-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 4px rgba(32, 24, 8, 0.04);
+}
+
+.sahaya-card-interactive, .sahay-card-interactive {
+  cursor: pointer;
+}
+
+.sahaya-card-interactive:hover, .sahay-card-interactive:hover {
+  border-color: var(--brand-primary);
+  box-shadow: 0 12px 28px -6px rgba(32, 24, 8, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Dark Card (Satoshi 700-800 Bold) */
+.sahaya-card-dark, .sahay-card-dark {
+  background-color: var(--text-main);
+  color: var(--bg-surface-light);
+  border: 1px solid var(--text-dark-element);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px -10px rgba(24, 16, 8, 0.3);
+}
+
+.sahaya-card-dark h1, .sahaya-card-dark h2, .sahaya-card-dark h3, 
+.sahaya-card-dark h4, .sahaya-card-dark h5, .sahaya-card-dark h6,
+.sahay-card-dark h1, .sahay-card-dark h2, .sahay-card-dark h3, 
+.sahay-card-dark h4, .sahay-card-dark h5, .sahay-card-dark h6 {
+  font-family: 'Satoshi', sans-serif !important;
+  font-weight: 800 !important;
+  color: var(--bg-surface-light) !important;
+}
+
+/* Buttons (CTA Buttons: Satoshi 600-700, BG: Orange #E86020, Text: Deep Espresso #201808) */
+.btn {
+  font-family: 'Satoshi', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.btn-sahaya-primary, .btn-sahay-primary {
+  background-color: var(--brand-primary) !important;   /* Orange #E86020 */
+  color: var(--text-main) !important;                   /* Deep Espresso #201808 Button Text */
+  font-weight: 700 !important;
+  border-radius: 0.75rem !important;
+  padding: 0.65rem 1.35rem !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(232, 96, 32, 0.25) !important;
+}
+
+.btn-sahaya-primary:hover, .btn-sahay-primary:hover {
+  background-color: var(--brand-hover) !important;     /* Light Orange #FF7A32 Hover Accent */
+  color: var(--text-main) !important;                   /* Deep Espresso #201808 */
+  transform: translateY(-1px);
+}
+
+.btn-sahaya-outline, .btn-sahay-outline {
+  background-color: var(--bg-surface-light) !important;
+  color: var(--text-main) !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 0.75rem !important;
+  padding: 0.6rem 1.25rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-sahaya-outline:hover, .btn-sahay-outline:hover {
+  border-color: var(--brand-primary) !important;
+  color: var(--brand-primary) !important;
+  background-color: var(--bg-card) !important;
+}
+
+.btn-sahaya-gold, .btn-sahay-gold {
+  background-color: var(--accent-gold) !important;
+  color: var(--text-main) !important;
+  font-weight: 800 !important;
+  border-radius: 0.75rem !important;
+  padding: 0.6rem 1.25rem !important;
+  border: none !important;
+}
+
+.btn-sahaya-gold:hover, .btn-sahay-gold:hover {
+  background-color: #f7cb70 !important;
+  color: var(--text-main) !important;
+}
+
+/* Badges & Small Uppercase Labels (Satoshi 500-600 Letter-spaced) */
+.badge, .text-uppercase {
+  font-family: 'Satoshi', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+}
+
+.badge-sahaya-orange, .badge-sahay-orange {
+  background-color: rgba(232, 96, 32, 0.12) !important;
+  color: var(--brand-primary) !important;
+  border: 1px solid rgba(232, 96, 32, 0.25) !important;
+  font-weight: 800 !important;
+  border-radius: 9999px !important;
+  padding: 0.35rem 0.75rem !important;
+}
+
+.badge-sahaya-gold, .badge-sahay-gold {
+  background-color: rgba(255, 217, 138, 0.35) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--accent-gold) !important;
+  font-weight: 800 !important;
+  border-radius: 9999px !important;
+  padding: 0.35rem 0.75rem !important;
+}
+
+.badge-sahaya-taupe, .badge-sahay-taupe {
+  background-color: var(--border-subtle) !important;
+  color: var(--text-main) !important;
+  border: 1px solid #D8CFC0 !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  padding: 0.35rem 0.75rem !important;
+}
+
+/* Form Inputs */
+.sahaya-input, .sahay-input, .sahaya-textarea, .sahay-textarea, .sahaya-select, .sahay-select {
+  background-color: var(--bg-surface-light) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-main) !important;
+  font-weight: 600 !important;
+  border-radius: 0.85rem !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.sahaya-input:focus, .sahay-input:focus, .sahaya-textarea:focus, .sahay-textarea:focus, .sahaya-select:focus, .sahay-select:focus {
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 0 0 4px rgba(232, 96, 32, 0.15) !important;
+}
+
+/* Footer Custom Styling (Exact User Table Specification) */
+.sahaya-footer, .sahay-footer {
+  background-color: #201808 !important;              /* Footer background: Deep Espresso #201808 */
+  color: #F8F0E0 !important;                         /* Main footer text: Warm Cream #F8F0E0 */
+  border-top: 1px solid #3A2D1D !important;           /* Borders/dividers: Dark Brown #3A2D1D */
+}
+
+.sahaya-footer h1, .sahaya-footer h2, .sahaya-footer h3, 
+.sahaya-footer h4, .sahaya-footer h5, .sahaya-footer h6,
+.sahay-footer h1, .sahay-footer h2, .sahay-footer h3, 
+.sahay-footer h4, .sahay-footer h5, .sahay-footer h6 {
+  color: #FFF8E8 !important;                         /* Headings: Cream / Off-white #FFF8E8 */
+  font-weight: 700 !important;
+}
+
+.sahaya-footer p, .sahaya-footer span, .sahay-footer p, .sahay-footer span {
+  color: #F8F0E0 !important;                         /* Main footer text: Warm Cream #F8F0E0 */
+}
+
+.sahaya-footer .text-muted, .sahaya-footer .small-desc,
+.sahay-footer .text-muted, .sahay-footer .small-desc {
+  color: #A99A82 !important;                         /* Secondary text: Muted Beige #A99A82 */
+}
+
+.sahaya-footer a, .sahay-footer a {
+  color: #E86020 !important;                         /* Orange accents / links: Vibrant Orange #E86020 */
+  transition: all 0.2s ease !important;
+}
+
+.sahaya-footer a:hover, .sahay-footer a:hover {
+  color: #FF7A32 !important;                         /* Hover accent: Light Orange #FF7A32 */
+  text-decoration: underline !important;
+}
+
+.sahaya-footer .border-secondary, .sahay-footer .border-secondary,
+.sahaya-footer .border-top, .sahay-footer .border-top,
+.sahaya-footer hr, .sahay-footer hr {
+  border-color: #3A2D1D !important;                  /* Borders/dividers: Dark Brown #3A2D1D */
+}
+
+/* Helper Palette Utilities */
+.bg-espresso { background-color: var(--text-main) !important; }
+.bg-light-cream, .bg-cream-white { background-color: var(--bg-card) !important; }
+.bg-surface-light { background-color: var(--bg-surface-light) !important; }
+.bg-alt-section, .bg-soft-beige { background-color: var(--bg-alt) !important; }
+.text-orange { color: var(--brand-primary) !important; }
+.border-beige { border-color: var(--border-subtle) !important; }
+.border-dark-brown { border-color: var(--border-dark) !important; }
+.cursor-pointer { cursor: pointer; }
+.hover-orange:hover { color: var(--brand-hover) !important; }
+
+/* Custom Dropdown Styling */
+.dropdown-menu {
+  background-color: var(--bg-surface-light) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 12px 32px rgba(32, 24, 8, 0.15) !important;
+  padding: 0.5rem 0 !important;
+}
+
+.dropdown-header {
+  color: var(--text-main) !important;
+}
+
+.dropdown-item {
+  color: var(--text-main) !important;
+  font-weight: 700 !important;
+  padding: 0.6rem 1.25rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: var(--bg-card) !important;
+  color: var(--brand-primary) !important;
+}
+
+.dropdown-item:hover i, .dropdown-item:focus i {
+  color: var(--brand-primary) !important;
+}
+
+.dropdown-item.text-danger:hover, .dropdown-item.text-danger:focus {
+  background-color: rgba(232, 96, 32, 0.12) !important;
+  color: var(--brand-primary) !important;
+}
+
+.dropdown-divider {
+  border-top-color: var(--border-subtle) !important;
+  opacity: 0.7 !important;
+}

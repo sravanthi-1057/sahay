@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How SAHAY Works</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom SAHAY Palette CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sahaya-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <div class="sahaya-logo-icon">S</div>
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold fs-4 text-dark lh-1">SAHAY</span>
+          <span class="small fw-bold text-orange text-uppercase" style="font-size: 0.65rem;">Civic Service Finder</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sahayNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="sahayNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find-help.html">Find Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saved-services.html">Saved Services</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbarAuthButtons">
+          <a href="login.html" class="btn btn-sahaya-outline btn-sm font-weight-bold px-3">Login</a>
+          <a href="signup.html" class="btn btn-sahaya-primary btn-sm font-weight-bold px-3">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="py-5 text-center border-bottom" style="background-color: var(--bg-alt);">
+    <div class="container py-4">
+      <span class="badge badge-sahaya-gold mb-3 d-inline-block">PROCESS EXPLAINED</span>
+      <h1 class="display-4 font-weight-bold text-dark mb-3">How SAHAY Works</h1>
+      <p class="fs-5 text-muted font-weight-semibold mx-auto mb-4" style="max-width: 720px; line-height: 1.6;">
+        SAHAY simplifies the process of finding and accessing the right service by starting with your situation, not government jargon.
+      </p>
+      <a href="find-help.html" class="btn btn-sahaya-primary btn-lg px-4 font-weight-bold">
+        Try SAHAY Now <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- 5-STEP COMPLETE FLOW -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="text-center max-w-3xl mx-auto mb-5">
+        <span class="badge badge-sahaya-orange mb-2">Five Sequential Steps</span>
+        <h2 class="h2 font-weight-bold text-dark">The Complete SAHAY Journey</h2>
+        <p class="text-muted font-weight-semibold">
+          How we take you from confusion to an actionable official resolution.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4 border-warning d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge badge-sahaya-orange">01 — Tell Us</span>
+                <i class="bi bi-chat-left-text-fill fs-3 text-orange"></i>
+              </div>
+              <h3 class="h4 font-weight-bold text-dark mb-2">01 — Tell Us</h3>
+              <p class="text-dark small mb-3" style="line-height: 1.6;">
+                Describe your problem naturally in your own words. You don't need to know the official name of the service, scheme, or department.
+              </p>
+            </div>
+            <div class="p-2 rounded bg-light border text-muted small">
+              <strong class="text-dark d-block">Example:</strong> “I can't afford my college fees for this semester.”
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4 border-warning d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge badge-sahaya-gold">02 — Understand</span>
+                <i class="bi bi-question-circle-fill fs-3 text-orange"></i>
+              </div>
+              <h3 class="h4 font-weight-bold text-dark mb-2">02 — Understand</h3>
+              <p class="text-dark small mb-3" style="line-height: 1.6;">
+                SAHAY asks a few relevant clarification questions to understand your academic level, income band, or location.
+              </p>
+            </div>
+            <div class="p-2 rounded bg-light border text-muted small">
+              <strong class="text-dark d-block">Example:</strong> “Are you pursuing undergraduate studies?”
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4 border-warning d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge badge-sahaya-orange">03 — Match</span>
+                <i class="bi bi-cpu-fill fs-3 text-orange"></i>
+              </div>
+              <h3 class="h4 font-weight-bold text-dark mb-2">03 — Match</h3>
+              <p class="text-dark small mb-3" style="line-height: 1.6;">
+                SAHAY identifies schemes, grants, certificates, or municipal dispatch services that may be relevant to your problem.
+              </p>
+            </div>
+            <div class="p-2 rounded bg-light border text-muted small">
+              <strong class="text-dark d-block">Example:</strong> Matched with Post-Matric Scholarship & Fee Waivers.
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4 border-warning d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge badge-sahaya-gold">04 — Guide</span>
+                <i class="bi bi-file-earmark-check-fill fs-3 text-orange"></i>
+              </div>
+              <h3 class="h4 font-weight-bold text-dark mb-2">04 — Guide</h3>
+              <p class="text-dark small mb-3" style="line-height: 1.6;">
+                Understand exact eligibility criteria, prepare required documents in advance, and review numbered application steps.
+              </p>
+            </div>
+            <div class="p-2 rounded bg-light border text-muted small">
+              <strong class="text-dark d-block">Example:</strong> Aadhaar, Income Proof, College ID, Fee Receipt.
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4 border-warning d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge badge-sahaya-orange">05 — Act</span>
+                <i class="bi bi-box-arrow-up-right fs-3 text-orange"></i>
+              </div>
+              <h3 class="h4 font-weight-bold text-dark mb-2">05 — Act</h3>
+              <p class="text-dark small mb-3" style="line-height: 1.6;">
+                Go to the verified official government portal and complete your submission with confidence.
+              </p>
+            </div>
+            <div class="p-2 rounded bg-light border text-muted small">
+              <strong class="text-dark d-block">Example:</strong> Visit scholarships.gov.in portal.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STORYTELLING REAL-LIFE EXAMPLE -->
+  <section class="py-5 bg-light-cream border-top border-bottom">
+    <div class="container py-3">
+      <div class="text-center max-w-3xl mx-auto mb-5">
+        <span class="badge badge-sahaya-gold mb-2">Storytelling Demonstration</span>
+        <h2 class="h2 font-weight-bold text-dark">Imagine Needing Help Without Knowing Where to Start</h2>
+        <p class="text-muted font-weight-semibold">
+          From a single sentence to a clear direction.
+        </p>
+      </div>
+
+      <div class="sahaya-card-dark p-4 p-md-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4 border-end border-secondary pe-lg-4 text-center text-lg-start">
+            <span class="badge badge-sahaya-gold mb-2">User Situation</span>
+            <h3 class="h4 font-weight-bold text-white mb-3 font-italic" style="font-style: italic;">“I can't afford my college fees.”</h3>
+            <p class="small text-white-50 mb-0" style="line-height: 1.6;">
+              Instead of spending days searching through hundreds of portal links, the citizen describes their financial struggle directly.
+            </p>
+          </div>
+
+          <div class="col-lg-8 ps-lg-4">
+            <div class="d-flex flex-column gap-3">
+              
+              <div class="p-3 rounded bg-dark border border-secondary text-light">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="text-warning small"><i class="bi bi-brightness-high-fill me-1"></i> Problem &amp; Understanding:</strong>
+                  <span class="badge bg-warning text-dark font-weight-bold">Education Domain</span>
+                </div>
+                <p class="small mb-0 text-white-50">Identified need for tuition financial assistance, scholarships, or state fee waivers.</p>
+              </div>
+
+              <div class="p-3 rounded bg-dark border border-secondary text-light">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="text-warning small"><i class="bi bi-file-earmark-check me-1"></i> Relevant Scheme &amp; Guidance:</strong>
+                  <span class="badge bg-success bg-opacity-20 text-success font-weight-bold">National Post-Matric Scholarship</span>
+                </div>
+                <p class="small mb-0 text-white-50">Requires Aadhaar, Income Certificate under ₹2.5L, and college ID receipt.</p>
+              </div>
+
+              <div class="p-3 rounded bg-dark border border-secondary text-light">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="text-warning small"><i class="bi bi-box-arrow-up-right me-1"></i> Actionable Gateway:</strong>
+                  <span class="badge bg-info bg-opacity-20 text-info font-weight-bold">Official Portal</span>
+                </div>
+                <p class="small mb-0 text-white-50">Direct verified link to <code>scholarships.gov.in</code> to apply online.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 pt-3 border-top border-secondary">
+          <span class="fs-5 font-weight-bold text-warning">From a sentence to a direction.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 bg-light-cream">
+    <div class="container text-center py-3">
+      <h2 class="h3 font-weight-bold text-dark mb-3">Ready to find your way forward?</h2>
+      <p class="text-muted mx-auto mb-4" style="max-width: 550px;">
+        Describe your situation in simple words and let SAHAY discover the right service for you.
+      </p>
+      <a href="find-help.html" class="btn btn-sahaya-primary btn-lg px-5 font-weight-bold">
+        Find Help Now <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <!-- FOOTER (BRAND, SUPPORT, PRIVACY POLICY & BOTTOM BAR) -->
+  <footer class="sahaya-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+                <!-- Section 1: Brand Section -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="sahaya-logo-icon">S</div>
+            <span class="font-weight-bold fs-4 text-light">SAHAY</span>
+          </div>
+          <p class="small text-orange font-weight-bold mb-3 text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</p>
+          <div class="d-flex align-items-center gap-2 mt-2">
+            <span class="badge badge-sahaya-gold">Public Benefit Platform</span>
+            <span class="badge badge-sahaya-orange">Prototype v1.0</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Platform Navigation Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Home</a></li>
+            <li><a href="find-help.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Find Help</a></li>
+            <li><a href="services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Services</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> About</a></li>
+            <li><a href="saved-services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Saved Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Citizen Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Citizen Support</h6>
+          <p class="small text-muted mb-2">Need direct assistance or emergency guidance?</p>
+          <div class="small text-muted">
+            <strong class="text-light d-block mb-1"><i class="bi bi-telephone-fill text-warning me-1"></i> National Helplines:</strong>
+            • National Citizen Portal: <strong>1915</strong><br/>
+            • Ayushman Bharat (PM-JAY): <strong>14555</strong><br/>
+            • National Scholarship Portal: <strong>0120-6619540</strong>
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy Policy & Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Privacy &amp; Policy</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+            <li><a href="#" onclick="alert('Privacy Policy: SAHAY respects user privacy. Problem descriptions and session data are stored locally in your browser and never sold.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-shield-lock text-warning me-1"></i> Privacy Policy</a></li>
+            <li><a href="#" onclick="alert('Terms of Service: SAHAY is an open citizen guidance portal. Official applications and fee payments occur directly on government domains.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-file-earmark-text text-warning me-1"></i> Terms of Service</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-people text-warning me-1"></i> Team &amp; Mission</a></li>
+          </ul>
+          <p class="small text-muted mb-0" style="font-size: 0.75rem; line-height: 1.4;">
+            SAHAY is a problem discovery engine. Official applications take place on verified department websites.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Bottom Bar -->
+      <div class="border-top border-secondary pt-3 d-flex flex-wrap justify-content-between align-items-center small text-muted gap-2">
+        <span>&copy; 2026 SAHAY Platform. All rights reserved. Open Civic Technology.</span>
+        <span>Start with the problem, not the service name. Built with <i class="bi bi-heart-fill text-orange"></i> for citizens.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

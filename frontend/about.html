@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — SAHAY</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom SAHAY Palette CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sahaya-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <div class="sahaya-logo-icon">S</div>
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold fs-4 text-dark lh-1">SAHAY</span>
+          <span class="small fw-bold text-orange text-uppercase" style="font-size: 0.65rem;">Civic Service Finder</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sahayNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="sahayNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find-help.html">Find Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saved-services.html">Saved Services</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbarAuthButtons">
+          <a href="login.html" class="btn btn-sahaya-outline btn-sm font-weight-bold px-3">Login</a>
+          <a href="signup.html" class="btn btn-sahaya-primary btn-sm font-weight-bold px-3">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN HERO BANNER -->
+  <header class="py-5 text-center border-bottom" style="background-color: var(--bg-alt);">
+    <div class="container py-4">
+      <span class="badge badge-sahaya-gold mb-3 d-inline-block">PUBLIC BENEFIT PLATFORM</span>
+      <h1 class="display-4 font-weight-bold text-dark mb-3">About SAHAY</h1>
+      <p class="fs-5 text-muted font-weight-semibold mx-auto mb-0" style="max-width: 750px; line-height: 1.6;">
+        SAHAY helps people discover the right services based on their problems rather than requiring users to know the exact service name.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- SECTION 2: WHY SAHAY? -->
+  <section class="py-5 bg-light-cream border-top border-bottom">
+    <div class="container py-3">
+      <div class="text-center max-w-3xl mx-auto mb-5">
+        <span class="badge badge-sahaya-gold mb-2">The Problem We Solve</span>
+        <h2 class="h2 font-weight-bold text-dark">Why SAHAY?</h2>
+        <p class="text-muted font-weight-semibold">
+          Finding official public assistance should not feel like navigating a complex maze.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4">
+            <div class="rounded bg-surface-light text-orange p-3 d-inline-block border mb-3">
+              <i class="bi bi-search fs-3"></i>
+            </div>
+            <h3 class="h5 font-weight-bold text-dark mb-2">Service Name Confusion</h3>
+            <p class="small text-muted mb-0" style="line-height: 1.6;">
+              Users know they need help, but do not know which official scheme or municipal department to approach.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4">
+            <div class="rounded bg-surface-light text-orange p-3 d-inline-block border mb-3">
+              <i class="bi bi-shield-slash fs-3"></i>
+            </div>
+            <h3 class="h5 font-weight-bold text-dark mb-2">Unclear Eligibility &amp; Documents</h3>
+            <p class="small text-muted mb-0" style="line-height: 1.6;">
+              Citizens waste time applying for schemes without knowing exact income thresholds or mandatory document checklists.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sahaya-card h-100 p-4">
+            <div class="rounded bg-surface-light text-orange p-3 d-inline-block border mb-3">
+              <i class="bi bi-diagram-3 fs-3"></i>
+            </div>
+            <h3 class="h5 font-weight-bold text-dark mb-2">Scattered Platforms</h3>
+            <p class="small text-muted mb-0" style="line-height: 1.6;">
+              Information is spread across hundreds of separate central, state, and NGO portals without a central problem-first entry point.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: OUR MISSION -->
+  <section class="py-5 bg-espresso text-white">
+    <div class="container text-center py-4">
+      <div class="max-w-3xl mx-auto" style="max-width: 750px;">
+        <span class="badge bg-warning text-dark font-weight-bold mb-3 px-3 py-1">OUR MISSION</span>
+        <h2 class="display-5 font-weight-bold text-white mb-4">
+          “Our mission is to make finding the right service simple, accessible, and understandable for everyone.”
+        </h2>
+        <p class="fs-5 text-white-50 mb-0" style="line-height: 1.6;">
+          We believe no citizen should miss out on education grants, healthcare coverage, or civic resolution simply because they didn't know the exact government title.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: HOW SAHAY HELPS PEOPLE -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="text-center max-w-3xl mx-auto mb-5">
+        <span class="badge badge-sahaya-orange mb-2">Complete Journey</span>
+        <h2 class="h2 font-weight-bold text-dark">How SAHAY Helps People</h2>
+        <p class="text-muted font-weight-semibold">
+          Moving citizens from confusion to a clear next step.
+        </p>
+      </div>
+
+      <div class="row g-3 justify-content-center text-center">
+        
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="p-3 rounded bg-light border h-100">
+            <div class="badge bg-espresso text-warning rounded-circle mb-2" style="width: 2rem; height: 2rem; line-height: 1.6rem;">1</div>
+            <h3 class="h6 font-weight-bold text-dark mb-1">Problem</h3>
+            <p class="small text-muted mb-0" style="font-size: 0.75rem;">Citizen describes situation</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="p-3 rounded bg-light border h-100">
+            <div class="badge bg-espresso text-warning rounded-circle mb-2" style="width: 2rem; height: 2rem; line-height: 1.6rem;">2</div>
+            <h3 class="h6 font-weight-bold text-dark mb-1">Questions</h3>
+            <p class="small text-muted mb-0" style="font-size: 0.75rem;">Clarifies key details</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="p-3 rounded bg-light border h-100">
+            <div class="badge bg-espresso text-warning rounded-circle mb-2" style="width: 2rem; height: 2rem; line-height: 1.6rem;">3</div>
+            <h3 class="h6 font-weight-bold text-dark mb-1">Matching</h3>
+            <p class="small text-muted mb-0" style="font-size: 0.75rem;">Matches relevant schemes</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="p-3 rounded bg-light border h-100">
+            <div class="badge bg-espresso text-warning rounded-circle mb-2" style="width: 2rem; height: 2rem; line-height: 1.6rem;">4</div>
+            <h3 class="h6 font-weight-bold text-dark mb-1">Guidance</h3>
+            <p class="small text-muted mb-0" style="font-size: 0.75rem;">Eligibility &amp; document prep</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="p-3 rounded bg-light border h-100">
+            <div class="badge bg-espresso text-warning rounded-circle mb-2" style="width: 2rem; height: 2rem; line-height: 1.6rem;">5</div>
+            <h3 class="h6 font-weight-bold text-dark mb-1">Action</h3>
+            <p class="small text-muted mb-0" style="font-size: 0.75rem;">Official portal submission</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS SECTION -->
+  <section class="py-5 bg-light-cream border-top">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-sahaya-orange mb-2">Team &amp; Visionaries</span>
+        <h2 class="h2 font-weight-bold text-dark">The People Behind SAHAY</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Meet the creators building SAHAY to make citizen support simpler and accessible.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Founder 1 -->
+        <div class="col-md-6 col-lg-5">
+          <div class="sahaya-card text-center p-4 h-100">
+            <div class="mx-auto mb-3 rounded-circle bg-espresso text-warning font-weight-bold d-flex align-items-center justify-content-center shadow-sm" style="width: 6rem; height: 6rem; border: 3px solid var(--accent-gold);">
+              <i class="bi bi-person-badge fs-1"></i>
+            </div>
+            <h3 class="h4 font-weight-bold text-dark mb-1">Your Name</h3>
+            <span class="badge-sahaya-gold d-inline-block mb-3">Frontend &amp; Product Design</span>
+            <p class="small text-muted mb-0" style="line-height: 1.6;">
+              Lead designer and frontend developer responsible for SAHAY's intuitive problem-first user interface, responsive layout architecture, design system, and component accessibility.
+            </p>
+          </div>
+        </div>
+
+        <!-- Founder 2 -->
+        <div class="col-md-6 col-lg-5">
+          <div class="sahaya-card text-center p-4 h-100">
+            <div class="mx-auto mb-3 rounded-circle bg-espresso text-warning font-weight-bold d-flex align-items-center justify-content-center shadow-sm" style="width: 6rem; height: 6rem; border: 3px solid var(--accent-gold);">
+              <i class="bi bi-code-slash fs-1"></i>
+            </div>
+            <h3 class="h4 font-weight-bold text-dark mb-1">Friend's Name</h3>
+            <span class="badge-sahaya-gold d-inline-block mb-3">Development &amp; Research</span>
+            <p class="small text-muted mb-0" style="line-height: 1.6;">
+              Lead developer and researcher responsible for the service dataset, problem keyword matching logic, diagnostic flows, and backend architecture planning.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <!-- FOOTER (BRAND, SUPPORT, PRIVACY POLICY & BOTTOM BAR) -->
+  <footer class="sahaya-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+                <!-- Section 1: Brand Section -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="sahaya-logo-icon">S</div>
+            <span class="font-weight-bold fs-4 text-light">SAHAY</span>
+          </div>
+          <p class="small text-orange font-weight-bold mb-3 text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</p>
+          <div class="d-flex align-items-center gap-2 mt-2">
+            <span class="badge badge-sahaya-gold">Public Benefit Platform</span>
+            <span class="badge badge-sahaya-orange">Prototype v1.0</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Platform Navigation Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Home</a></li>
+            <li><a href="find-help.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Find Help</a></li>
+            <li><a href="services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Services</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> About</a></li>
+            <li><a href="saved-services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Saved Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Citizen Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Citizen Support</h6>
+          <p class="small text-muted mb-2">Need direct assistance or emergency guidance?</p>
+          <div class="small text-muted">
+            <strong class="text-light d-block mb-1"><i class="bi bi-telephone-fill text-warning me-1"></i> National Helplines:</strong>
+            • National Citizen Portal: <strong>1915</strong><br/>
+            • Ayushman Bharat (PM-JAY): <strong>14555</strong><br/>
+            • National Scholarship Portal: <strong>0120-6619540</strong>
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy Policy & Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Privacy &amp; Policy</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+            <li><a href="#" onclick="alert('Privacy Policy: SAHAY respects user privacy. Problem descriptions and session data are stored locally in your browser and never sold.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-shield-lock text-warning me-1"></i> Privacy Policy</a></li>
+            <li><a href="#" onclick="alert('Terms of Service: SAHAY is an open citizen guidance portal. Official applications and fee payments occur directly on government domains.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-file-earmark-text text-warning me-1"></i> Terms of Service</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-people text-warning me-1"></i> Team &amp; Mission</a></li>
+          </ul>
+          <p class="small text-muted mb-0" style="font-size: 0.75rem; line-height: 1.4;">
+            SAHAY is a problem discovery engine. Official applications take place on verified department websites.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Bottom Bar -->
+      <div class="border-top border-secondary pt-3 d-flex flex-wrap justify-content-between align-items-center small text-muted gap-2">
+        <span>&copy; 2026 SAHAY Platform. All rights reserved. Open Civic Technology.</span>
+        <span>Start with the problem, not the service name. Built with <i class="bi bi-heart-fill text-orange"></i> for citizens.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

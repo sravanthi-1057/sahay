@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAHAY — Tell us where you’re stuck. We’ll help you take the next step.</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom SAHAY Palette CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sahaya-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <div class="sahaya-logo-icon">S</div>
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold fs-4 text-dark lh-1">SAHAY</span>
+          <span class="small fw-bold text-orange text-uppercase" style="font-size: 0.65rem;">Civic Service Finder</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sahayNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="sahayNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link active font-weight-bold text-orange" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find-help.html">Find Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saved-services.html">Saved Services</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbarAuthButtons">
+          <a href="login.html" class="btn btn-sahaya-outline btn-sm font-weight-bold px-3">Login</a>
+          <a href="signup.html" class="btn btn-sahaya-primary btn-sm font-weight-bold px-3">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="py-5 bg-gradient border-bottom" style="background: linear-gradient(180deg, var(--bg-surface-light) 0%, var(--bg-page) 100%);">
+      <div class="container py-5 text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-9">
+            
+            <!-- Eyebrow -->
+            <div class="badge badge-sahaya-gold mb-3 d-inline-flex align-items-center gap-2 px-3 py-2 fs-6">
+              <i class="bi bi-shield-check text-orange"></i>
+              <span class="text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</span>
+            </div>
+
+            <!-- UPDATED MAIN HERO HEADING -->
+            <h1 class="display-3 font-weight-bold text-dark mb-4 text-center lh-sm">
+              Tell us where you’re stuck.<br/>
+              <span class="text-orange text-decoration-underline" style="text-decoration-color: var(--accent-gold) !important;">We’ll help you take the next step.</span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="lead font-weight-bold text-muted mb-4 mx-auto" style="max-width: 760px; line-height: 1.7; font-size: 1.25rem;">
+              SAHAY helps people discover relevant services, understand what they need, and find the right next step without requiring them to know the exact service name.
+            </p>
+
+            <!-- Primary & Secondary CTA Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-3 pt-2">
+              <a href="find-help.html" class="btn btn-sahaya-primary btn-lg px-4 py-3 font-weight-bold fs-5">
+                Find Help <i class="bi bi-search ms-2"></i>
+              </a>
+              <a href="services.html" class="btn btn-sahaya-outline btn-lg px-4 py-3 font-weight-bold fs-5">
+                Explore Services <i class="bi bi-grid-3x3-gap ms-2"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS SAHAY? SECTION -->
+    <section class="py-5 border-bottom">
+      <div class="container py-3">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge badge-sahaya-orange mb-2">Core Philosophy</span>
+            <h2 class="h2 font-weight-bold text-dark mb-3">What is SAHAY?</h2>
+            <p class="fs-5 text-dark font-weight-semibold mb-3">
+              <strong>Start with the problem, not the service name.</strong>
+            </p>
+            <p class="text-muted mb-4" style="line-height: 1.7;">
+              SAHAY is an intuitive problem-to-service discovery platform. Whether a student is struggling with college fees, a resident faces garbage accumulation, or a farmer seeks crop support, SAHAY translates everyday human situations into clear, actionable official directions.
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="sahaya-card p-4 border-warning bg-cream-white">
+              <div class="p-3 bg-surface-light rounded border mb-3">
+                <strong class="text-orange d-block mb-1"><i class="bi bi-chat-quote-fill me-1"></i> The Problem:</strong>
+                <span class="text-dark small">Citizens know their struggle, but don't know the official scheme name or bureau department.</span>
+              </div>
+              <div class="p-3 bg-espresso text-light rounded border">
+                <strong class="text-warning d-block mb-1"><i class="bi bi-compass-fill me-1"></i> The SAHAY Solution:</strong>
+                <span class="small text-white-50">Describe your situation naturally &rarr; Get matched schemes, eligibility, required documents, and verified application links.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW SAHAY WORKS SECTION -->
+    <section id="how-it-works" class="py-5" style="background-color: #FEF8E8; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container text-center">
+        <!-- How SAHAY Works Visual Flow Image (Centered & Seamless Background) -->
+        <div class="my-2 d-flex justify-content-center align-items-center">
+          <img 
+            src="assets/how-sahay-works.png" 
+            alt="How SAHAY Works — A simple path from your problem to the right solution." 
+            class="img-fluid mx-auto d-block"
+            style="max-width: 100%; max-height: 550px; object-fit: contain;"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <section class="py-5 bg-alt-section border-top">
+      <div class="container text-center py-3">
+        <h2 class="h3 font-weight-bold text-dark mb-3">Start with your problem today</h2>
+        <p class="text-muted mx-auto mb-4" style="max-width: 550px;">
+          Describe your situation in simple words and let SAHAY discover the right service for you.
+        </p>
+        <a href="find-help.html" class="btn btn-sahaya-primary btn-lg px-5 font-weight-bold">
+          Find Help Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (BRAND, SUPPORT, PRIVACY POLICY & BOTTOM BAR) -->
+  <footer class="sahaya-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+        <!-- Section 1: Brand Section -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="sahaya-logo-icon">S</div>
+            <span class="font-weight-bold fs-4 text-light">SAHAY</span>
+          </div>
+          <p class="small text-orange font-weight-bold mb-3 text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</p>
+          <div class="d-flex align-items-center gap-2 mt-2">
+            <span class="badge badge-sahaya-gold">Public Benefit Platform</span>
+            <span class="badge badge-sahaya-orange">Prototype v1.0</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Platform Navigation Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Home</a></li>
+            <li><a href="find-help.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Find Help</a></li>
+            <li><a href="services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Services</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> About</a></li>
+            <li><a href="saved-services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Saved Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Citizen Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Citizen Support</h6>
+          <p class="small text-muted mb-2">Need direct assistance or emergency guidance?</p>
+          <div class="small text-muted">
+            <strong class="text-light d-block mb-1"><i class="bi bi-telephone-fill text-warning me-1"></i> National Helplines:</strong>
+            • National Citizen Portal: <strong>1915</strong><br/>
+            • Ayushman Bharat (PM-JAY): <strong>14555</strong><br/>
+            • National Scholarship Portal: <strong>0120-6619540</strong>
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy Policy & Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Privacy &amp; Policy</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+            <li><a href="#" onclick="alert('Privacy Policy: SAHAY respects user privacy. Problem descriptions and session data are stored locally in your browser and never sold.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-shield-lock text-warning me-1"></i> Privacy Policy</a></li>
+            <li><a href="#" onclick="alert('Terms of Service: SAHAY is an open citizen guidance portal. Official applications and fee payments occur directly on government domains.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-file-earmark-text text-warning me-1"></i> Terms of Service</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-people text-warning me-1"></i> Team &amp; Mission</a></li>
+          </ul>
+          <p class="small text-muted mb-0" style="font-size: 0.75rem; line-height: 1.4;">
+            SAHAY is a problem discovery engine. Official applications take place on verified department websites.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Bottom Bar -->
+      <div class="border-top border-secondary pt-3 d-flex flex-wrap justify-content-between align-items-center small text-muted gap-2">
+        <span>&copy; 2026 SAHAY Platform. All rights reserved. Open Civic Technology.</span>
+        <span>Start with the problem, not the service name. Built with <i class="bi bi-heart-fill text-orange"></i> for citizens.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    function fillHomePrompt(txt) {
+      const input = document.getElementById('homeProblemTextarea');
+      input.value = txt;
+      input.focus();
+    }
+
+    function handleHomeProblemSubmit(event) {
+      event.preventDefault();
+      const txt = document.getElementById('homeProblemTextarea').value.trim();
+      if (!txt) {
+        alert('Please describe your problem or select an example prompt.');
+        return;
+      }
+      sessionStorage.setItem('sahay_problem_input', txt);
+      window.location.href = 'find-help.html';
+    }
+  </script>
+</body>
+</html>

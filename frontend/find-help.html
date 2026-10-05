@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Help — SAHAY</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom SAHAY Palette CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sahaya-navbar sticky-top" id="mainHeaderNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <div class="sahaya-logo-icon">S</div>
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold fs-4 text-dark lh-1">SAHAY</span>
+          <span class="small fw-bold text-orange text-uppercase" style="font-size: 0.65rem;">Civic Service Finder</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#sahayNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="sahayNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find-help.html">Find Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saved-services.html">Saved Services</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbarAuthButtons">
+          <a href="login.html" class="btn btn-sahaya-outline btn-sm font-weight-bold px-3">Login</a>
+          <a href="signup.html" class="btn btn-sahaya-primary btn-sm font-weight-bold px-3">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN MULTI-STEP FLOW -->
+  <main class="py-5 flex-fill">
+    <div class="container">
+
+      <!-- STEP 1: PROBLEM INPUT -->
+      <section id="step1Container" class="py-3">
+        <div class="max-w-3xl mx-auto" style="max-width: 800px;">
+          
+          <div class="text-center mb-4">
+            <span class="badge badge-sahaya-gold mb-2">Step 1 — Describe Problem</span>
+            <h1 class="display-5 font-weight-bold text-dark mb-3">What do you need help with?</h1>
+            <p class="lead text-muted font-weight-semibold">
+              Tell us what's going on in simple words. No need to know the service name.
+            </p>
+          </div>
+
+          <div class="sahaya-card p-4 p-md-5 shadow-sm">
+            <form onsubmit="handleFindHelpInputSubmit(event);">
+              <div class="mb-4">
+                <label for="findHelpTextarea" class="form-label small font-weight-bold text-dark text-uppercase">Describe your situation</label>
+                <textarea
+                  id="findHelpTextarea"
+                  class="form-control sahaya-textarea"
+                  rows="5"
+                  placeholder="Tell us what's going on..."
+                  style="font-size: 1.15rem; line-height: 1.6;"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="mb-4">
+                <span class="small font-weight-bold text-muted text-uppercase d-block mb-2">
+                  <i class="bi bi-lightbulb-fill text-orange me-1"></i> Example suggested prompts:
+                </span>
+                <div class="d-flex flex-wrap gap-2">
+                  <button type="button" class="badge badge-sahaya-taupe border-0 cursor-pointer" onclick="fillPromptText('I can\'t afford my college fees');">
+                    “I can't afford my college fees”
+                  </button>
+                  <button type="button" class="badge badge-sahaya-taupe border-0 cursor-pointer" onclick="fillPromptText('I need help getting a government document');">
+                    “I need help getting a government document”
+                  </button>
+                  <button type="button" class="badge badge-sahaya-taupe border-0 cursor-pointer" onclick="fillPromptText('I am looking for employment support');">
+                    “I am looking for employment support”
+                  </button>
+                  <button type="button" class="badge badge-sahaya-taupe border-0 cursor-pointer" onclick="fillPromptText('There is garbage near my house');">
+                    “There is garbage near my house”
+                  </button>
+                  <button type="button" class="badge badge-sahaya-taupe border-0 cursor-pointer" onclick="fillPromptText('I need help with a healthcare service');">
+                    “I need help with a healthcare service”
+                  </button>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <span class="small text-muted font-weight-semibold">
+                  <i class="bi bi-info-circle-fill text-warning me-1"></i> No need to know the service name. Just tell us what you need.
+                </span>
+                <button type="submit" id="findHelpSubmitBtn" class="btn btn-sahaya-primary btn-lg font-weight-bold px-4">
+                  Continue / Find Help <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STEP 2: CLARIFICATION QUESTIONS (DISTRACTION-FREE) -->
+      <section id="step2Container" class="d-none py-3">
+        <div class="max-w-2xl mx-auto" style="max-width: 720px;">
+          
+          <div class="sahaya-card p-4 p-md-5 shadow-sm">
+            
+            <!-- Progress Header -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge badge-sahaya-orange" id="qProgressBadge">Question 1 of 3</span>
+              <span class="small text-muted font-weight-bold" id="qPercentText">33% Completed</span>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress mb-4" style="height: 6px; background-color: var(--border-subtle);">
+              <div id="qProgressBar" class="progress-bar bg-orange" role="progressbar" style="width: 33%; background-color: var(--brand-primary) !important;"></div>
+            </div>
+
+            <!-- Question Heading -->
+            <h2 class="h3 font-weight-bold text-dark mb-2 heading-font" id="qTitle">
+              Loading question...
+            </h2>
+            <p class="small text-muted font-weight-semibold mb-4" id="qSubtitle">
+              Subtitle details...
+            </p>
+
+            <!-- Question Options Grid -->
+            <div class="row g-3" id="qOptionsGrid">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Navigation Actions -->
+            <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top">
+              <button id="qBackBtn" onclick="handleQBack();" class="btn btn-sahaya-outline">
+                <i class="bi bi-arrow-left me-1"></i> Back
+              </button>
+
+              <button id="qNextBtn" onclick="handleQNext();" class="btn btn-sahaya-primary btn-lg" disabled>
+                Continue <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STEP 3: MATCHED RECOMMENDED SERVICES -->
+      <section id="step3Container" class="d-none py-3">
+        
+        <!-- Header -->
+        <div class="sahaya-card p-4 mb-4 border-warning bg-light-cream">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div>
+              <span class="badge badge-sahaya-gold mb-2">Smart Matcher Results</span>
+              <h1 class="h2 font-weight-bold text-dark mb-1">We found services that may help.</h1>
+              <p class="text-muted font-weight-semibold mb-0" id="resultsSubtitleText">
+                Based on what you've told us.
+              </p>
+            </div>
+            
+            <div class="d-flex gap-2">
+              <button onclick="resetFindHelpFlow();" class="btn btn-sahaya-outline btn-sm font-weight-bold">
+                <i class="bi bi-arrow-counterclockwise me-1"></i> Describe Another Problem
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem Summary Card -->
+        <div class="p-3 rounded-3 bg-espresso text-light border mb-4 d-flex align-items-center justify-content-between">
+          <div>
+            <span class="small text-warning font-weight-bold d-block mb-1"><i class="bi bi-chat-quote-fill me-1"></i> Your Problem Summary:</span>
+            <span class="small text-light font-weight-semibold italic" id="userProblemSummaryText">“...”</span>
+          </div>
+          <span class="badge badge-sahaya-orange" id="detectedCategoryBadge">Category</span>
+        </div>
+
+        <!-- Service Cards Grid -->
+        <div class="row g-4" id="matchedResultsGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+    <!-- FOOTER (BRAND, SUPPORT, PRIVACY POLICY & BOTTOM BAR) -->
+  <footer class="sahaya-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+                <!-- Section 1: Brand Section -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="sahaya-logo-icon">S</div>
+            <span class="font-weight-bold fs-4 text-light">SAHAY</span>
+          </div>
+          <p class="small text-orange font-weight-bold mb-3 text-uppercase" style="letter-spacing: 0.05em;">YOUR PROBLEM. THE RIGHT DIRECTION.</p>
+          <div class="d-flex align-items-center gap-2 mt-2">
+            <span class="badge badge-sahaya-gold">Public Benefit Platform</span>
+            <span class="badge badge-sahaya-orange">Prototype v1.0</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Platform Navigation Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Home</a></li>
+            <li><a href="find-help.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Find Help</a></li>
+            <li><a href="services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Services</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> About</a></li>
+            <li><a href="saved-services.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-chevron-right text-orange me-1"></i> Saved Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Citizen Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Citizen Support</h6>
+          <p class="small text-muted mb-2">Need direct assistance or emergency guidance?</p>
+          <div class="small text-muted">
+            <strong class="text-light d-block mb-1"><i class="bi bi-telephone-fill text-warning me-1"></i> National Helplines:</strong>
+            • National Citizen Portal: <strong>1915</strong><br/>
+            • Ayushman Bharat (PM-JAY): <strong>14555</strong><br/>
+            • National Scholarship Portal: <strong>0120-6619540</strong>
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy Policy & Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-light mb-3 text-uppercase" style="letter-spacing: 0.05em;">Privacy &amp; Policy</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-3">
+            <li><a href="#" onclick="alert('Privacy Policy: SAHAY respects user privacy. Problem descriptions and session data are stored locally in your browser and never sold.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-shield-lock text-warning me-1"></i> Privacy Policy</a></li>
+            <li><a href="#" onclick="alert('Terms of Service: SAHAY is an open citizen guidance portal. Official applications and fee payments occur directly on government domains.'); return false;" class="text-muted text-decoration-none hover-orange"><i class="bi bi-file-earmark-text text-warning me-1"></i> Terms of Service</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none hover-orange"><i class="bi bi-people text-warning me-1"></i> Team &amp; Mission</a></li>
+          </ul>
+          <p class="small text-muted mb-0" style="font-size: 0.75rem; line-height: 1.4;">
+            SAHAY is a problem discovery engine. Official applications take place on verified department websites.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Bottom Bar -->
+      <div class="border-top border-secondary pt-3 d-flex flex-wrap justify-content-between align-items-center small text-muted gap-2">
+        <span>&copy; 2026 SAHAY Platform. All rights reserved. Open Civic Technology.</span>
+        <span>Start with the problem, not the service name. Built with <i class="bi bi-heart-fill text-orange"></i> for citizens.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    let problemText = "";
+    let matchResult = null;
+    let activeQIndex = 0;
+    let selectedAnswers = {};
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if sessionStorage has input from index.html
+      const savedInput = sessionStorage.getItem('sahay_problem_input');
+      if (savedInput) {
+        document.getElementById('findHelpTextarea').value = savedInput;
+        sessionStorage.removeItem('sahay_problem_input');
+      }
+    });
+
+    function fillPromptText(txt) {
+      const area = document.getElementById('findHelpTextarea');
+      area.value = txt;
+      area.focus();
+    }
+
+    function handleFindHelpInputSubmit(event) {
+      event.preventDefault();
+      problemText = document.getElementById('findHelpTextarea').value.trim();
+
+      if (!problemText) {
+        alert('Please describe your problem or select an example statement.');
+        return;
+      }
+
+      // Execute keyword match
+      matchResult = matchServicesByProblem(problemText);
+      selectedAnswers = {};
+      activeQIndex = 0;
+
+      // Transition to Step 2 Clarification Questions
+      document.getElementById('step1Container').className = "d-none";
+      document.getElementById('step2Container').className = "d-block py-3";
+      
+      renderQuestionStep(0);
+    }
+
+    function renderQuestionStep(idx) {
+      const questions = matchResult.questions;
+      if (!questions || questions.length === 0 || idx >= questions.length) {
+        // Show Step 3 Results immediately if no questions
+        showStep3Results();
+        return;
+      }
+
+      activeQIndex = idx;
+      const q = questions[idx];
+
+      const pct = Math.round(((idx + 1) / questions.length) * 100);
+      document.getElementById('qProgressBadge').textContent = `Question ${idx + 1} of ${questions.length}`;
+      document.getElementById('qPercentText').textContent = `${pct}% Completed`;
+      document.getElementById('qProgressBar').style.width = `${pct}%`;
+
+      document.getElementById('qTitle').textContent = q.text;
+      document.getElementById('qSubtitle').textContent = q.subtitle || '';
+
+      const currentVal = selectedAnswers[q.id];
+
+      const grid = document.getElementById('qOptionsGrid');
+      grid.innerHTML = q.options.map(opt => `
+        <div class="col-12 col-md-6">
+          <div
+            onclick="selectOption('${q.id}', '${opt.value}');"
+            class="p-3 rounded-3 border cursor-pointer font-weight-bold d-flex justify-content-between align-items-center ${currentVal === opt.value ? 'bg-espresso text-warning border-warning shadow-sm' : 'bg-surface-light text-dark border-beige'}"
+          >
+            <span>${opt.label}</span>
+            ${currentVal === opt.value ? '<i class="bi bi-check-circle-fill text-warning fs-5"></i>' : '<i class="bi bi-circle text-muted"></i>'}
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('qNextBtn').disabled = !currentVal;
+    }
+
+    function selectOption(qId, val) {
+      selectedAnswers[qId] = val;
+      renderQuestionStep(activeQIndex);
+    }
+
+    function handleQBack() {
+      if (activeQIndex > 0) {
+        renderQuestionStep(activeQIndex - 1);
+      } else {
+        // Return to Step 1 Input
+        document.getElementById('step2Container').className = "d-none";
+        document.getElementById('step1Container').className = "d-block py-3";
+      }
+    }
+
+    function handleQNext() {
+      const questions = matchResult.questions;
+      if (activeQIndex < questions.length - 1) {
+        renderQuestionStep(activeQIndex + 1);
+      } else {
+        showStep3Results();
+      }
+    }
+
+    function showStep3Results() {
+      document.getElementById('step1Container').className = "d-none";
+      document.getElementById('step2Container').className = "d-none";
+      document.getElementById('step3Container').className = "d-block py-3";
+
+      document.getElementById('userProblemSummaryText').textContent = `“${problemText}”`;
+      document.getElementById('detectedCategoryBadge').textContent = matchResult.detectedCategory;
+
+      const grid = document.getElementById('matchedResultsGrid');
+      grid.innerHTML = matchResult.matchedServices.map(service => renderDetailedRecommendationCardHTML(service)).join('');
+    }
+
+    function renderDetailedRecommendationCardHTML(service) {
+      const savedIds = getSavedServices();
+      const isSaved = savedIds.includes(service.id);
+
+      return `
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="sahaya-card sahay-card-interactive w-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge-sahaya-orange">${escapeHtml(service.category)}</span>
+                <span class="badge-sahaya-gold d-flex align-items-center gap-1">
+                  <i class="bi bi-check-circle-fill text-warning"></i> You may be eligible
+                </span>
+              </div>
+
+              <h3 class="h5 font-weight-bold mb-2">
+                <a href="service-details.html?id=${service.id}" class="text-decoration-none text-dark">${escapeHtml(service.name)}</a>
+              </h3>
+
+              <p class="small text-dark opacity-75 mb-3" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5;">
+                ${escapeHtml(service.description)}
+              </p>
+
+              <!-- Why it may help -->
+              <div class="p-2 rounded bg-light border mb-2 small text-muted">
+                <strong class="text-dark d-block">Why it may help:</strong> ${escapeHtml(service.whyItHelps)}
+              </div>
+
+              <!-- Eligibility summary -->
+              <div class="p-2 rounded bg-light border mb-2 small text-muted">
+                <strong class="text-dark d-block">Eligibility Summary:</strong> ${(service.eligibility && service.eligibility[0]) ? escapeHtml(service.eligibility[0]) : 'Eligible citizens'}
+              </div>
+
+              <!-- Documents summary -->
+              <div class="p-2 rounded bg-light border mb-3 small text-muted">
+                <strong class="text-dark d-block">Required Documents:</strong> ${(service.documents && service.documents[0]) ? escapeHtml(service.documents[0]) : 'Aadhaar Card, Proof'}
+              </div>
+            </div>
+
+            <div>
+              <div class="d-flex gap-2 pt-2 border-top">
+                <a href="service-details.html?id=${service.id}" class="btn btn-sahaya-primary btn-sm flex-fill font-weight-bold">
+                  View Details <i class="bi bi-arrow-right"></i>
+                </a>
+                <button onclick="event.preventDefault(); toggleSaveService(${service.id}); showStep3Results();" class="btn btn-sahaya-outline btn-sm font-weight-bold" title="${isSaved ? 'Saved' : 'Save Service'}">
+                  <i class="bi bi-bookmark${isSaved ? '-fill text-warning' : ''}"></i> ${isSaved ? 'Saved' : 'Save'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function resetFindHelpFlow() {
+      document.getElementById('step3Container').className = "d-none";
+      document.getElementById('step2Container').className = "d-none";
+      document.getElementById('step1Container').className = "d-block py-3";
+      document.getElementById('findHelpTextarea').value = "";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
