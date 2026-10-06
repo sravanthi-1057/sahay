@@ -198,5 +198,62 @@ function toggleSaveService(serviceId) {
     updated = [...saved, numId];
   }
   localStorage.setItem('sahay_saved_ids', JSON.stringify(updated));
+  
+  // Optionally sync with Django Backend if online
+  fetch(`${API_BASE_URL}/saved-services/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ service_id: numId })
+  }).catch(() => {});
+
   return updated;
+}
+
+/**
+ * Django REST API Integration Helpers
+ */
+const API_BASE_URL = 'http://127.0.0.1:8000/api';
+
+async function fetchCategoriesFromBackend() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/categories/`);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch (e) {
+    console.warn('Django backend offline, using fallback dataset:', e);
+  }
+  return CATEGORIES_DATA;
+}
+
+async function fetchServicesFromBackend(category = '', search = '') {
+  try {
+    let url = `${API_BASE_URL}/services/?`;
+    if (category) url += `category=${encodeURIComponent(category)}&`;
+    if (search) url += `search=${encodeURIComponent(search)}&`;
+    const res = await fetch(url);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch (e) {
+    console.warn('Django backend offline, using local filter:', e);
+  }
+  return filterServices(category, search);
+}
+
+async function queryDiagnosticMatcherBackend(problemText) {
+  try {
+    const res = await fetch(`${API_BASE_URL}/find-help/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: problemText })
+    });
+    if (res.ok) {
+      const data = await res.json();
+      return data.results;
+    }
+  } catch (e) {
+    console.warn('Django diagnostic API offline, using client matcher:', e);
+  }
+  return null;
 }
